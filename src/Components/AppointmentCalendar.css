@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; 
+}
+
+
+.appointment-calendar {
+  background-color: aquamarine;
+  text-decoration: double;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+.appointment-calendar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+
+.react-calendar {
+  margin-bottom: 40px;
+  width: 50%;
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+
+.add-appointment-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #066626;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-appointment-btn:hover {
+  background-color: #45a049;
+}
+
+/* Class to highlight dates with appointments */
+.has-appointments {
+  background-color: #dff0d8;
+}
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+/* Form styling */
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.appointment-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.appointment-form input {
+  width: 90%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.appointment-form input[type="number"],
+.appointment-form input[type="tel"],
+.appointment-form input[type="email"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Button styling */
+.appointment-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.appointment-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.appointment-form button[type="button"] {
+  background-color: #f44336;
+  color: white;
+}
+
+.appointment-form button[type="button"]:hover {
+  background-color: #e53935;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .appointment-calendar {
+    padding: 10px;
+  }
+
+  .react-calendar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .appointment-form input {
+    width: 100%;
+  }
+
+  .appointment-form button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .appointment-form button[type="submit"],
+  .appointment-form button[type="button"] {
+    margin-top: 5px;
+  }
+}

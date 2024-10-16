@@ -1,0 +1,51 @@
+.appointment-calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .appointment-calendar h2 {
+    margin-bottom: 20px;
+  }
+  
+  .appointment-form {
+    margin: 20px 0;
+  }
+  
+  .appointment-form input {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .appointment-form button {
+    padding: 8px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .appointment-form button:hover {
+    background-color: #007bb2;
+  }
+  
+  .appointments-list {
+    margin-top: 20px;
+  }
+  
+  .appointments-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .appointments-list ul li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .has-appointments {
+    background-color: #2c9409 !important; 
+  } 
